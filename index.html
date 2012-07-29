@@ -1,0 +1,402 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<title>:: TomasOlivares.com | Curriculum Tomas Olivares ::</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<meta name="description" content="Curriculum vitae de Tomas Olivares. Ingeniero en Informatica de la Universidad Diego Portales (en curso). Administrador de sistemas Linux tales como Red Hat, Suse, Solaris entre otros." />
+	<meta name="keywords" content="linux,suse,redhat,sun,solaris,administrador de sistemas,informatico" />
+	
+	<!-- //////// Favicon ////////  -->
+	
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"  />
+	
+	<!-- //////// Css StyleSheets ////////  -->
+	
+	<link href="_layout/screen-style.css" rel="stylesheet" type="text/css" />
+	<link href="_layout/print-style.css" rel="stylesheet" type="text/css" media="print" />
+	
+	<!-- //////// DD_belatedPNG - Png Fix for IE 6 ////////  -->
+	
+	<!--[if lt IE 7]>
+	<script type="text/javascript" src="_layout/js/DD_belatedPNG_0.0.7a-min.js"></script>
+	<script type="text/javascript">
+
+	</script>
+	<![endif]-->
+	
+	<!-- //////// jQuery ////////  -->
+	
+	<script src="_layout/js/jquery-1.3.1.min.js" type="text/javascript"></script>
+
+	<!-- //////// Cufon Font Replacement ////////  -->
+	
+	<script src="_layout/js/cufon-yui.js" type="text/javascript"></script>
+	<script src="_layout/js/Aller.font.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		Cufon.replace('h1');
+		Cufon.replace('.item h2');
+		Cufon.replace('h2.cv-section-name');
+	</script>
+	
+	<!-- //////// FancyBox - jQuery powered Lightbox ////////  -->
+	
+	<link rel="stylesheet" type="text/css" href="_layout/js/fancybox/jquery.fancybox-1.2.6.css" media="screen" />
+	<script type="text/javascript" src="_layout/js/fancybox/jquery.fancybox-1.2.6.pack.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("a.lightbox").fancybox({
+				'overlayOpacity': 0.7,
+				'overlayColor'	: '#333'
+			});
+		});
+	</script>
+	 
+	<!-- //////// Tipsy - custom Tooltips ////////  -->
+	
+	<link rel="stylesheet" type="text/css" href="_layout/js/tipsy/tipsy.css" />
+	<script type="text/javascript" src="_layout/js/tipsy/jquery.tipsy.js"></script>
+	<script type='text/javascript'>
+	  $(function() {
+		$('.tip').tipsy({gravity: 'n'});
+	  });
+	</script>
+	
+	<!-- //////// Email Me Panel Animation ////////  -->
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".emailme").click(function(){
+				$(".panel").toggle("fast");
+				$(this).toggleClass("active");
+				return false;
+			});
+		});
+	</script>
+	
+	<!-- //////// Contact Form ////////  -->
+	
+	<script type="text/javascript">                                         
+	/* <![CDATA[ */
+		$(document).ready(function(){ // sends the data filled in the contact form to the php file and shows a message
+			$("#contact-form").submit(function(){
+				var str = $(this).serialize();
+				$.ajax({
+				   type: "POST",
+				   url: "_layout/php/send.php",
+				   data: str,
+				   success: function(msg)
+				   {
+						$("#formstatus").ajaxComplete(function(event, request, settings){
+							if(msg == 'OK'){ // Message Sent? Show the 'Thank You' message and hide the form
+								result = '<div class="formstatusok">Tu mensaje ha sido enviado. Gracias!</div>';
+								$("#fields").hide();
+							}
+							else{
+								result = msg;
+							}
+							$(this).html(result);
+						});
+					}
+				
+				 });
+				return false;
+			});
+		});
+	/* ]]> */	
+	</script>  
+		
+</head>
+<body>
+	
+	<div id="cv">
+	
+		<!-- // ABOUT ME /////////////////////////////////////////////////////////////////// -->
+		
+		<div class="cv-section first-cv-section fixed">
+		
+			<div class="person">
+				<a class="lightbox" rel="mypics" href="_content/640x550-placeholder.jpg" title="Tomas Olivares" >
+					<img src="_content/100x100-placeholder.jpg" width="100" height="100" alt="Tomas Olivares" />
+				</a>
+				<h1>Tomas Olivares</h1>
+				<h2>Administrador de Sistemas</h2>
+			</div>
+			
+			<div id="contact-info">
+				<ul id="social-media">
+					<li><a href="http://www.flickr.com/photos/choclo/" title="Pagina Flickr" class="tip"><img src="_layout/images/social-icons/flickr.png" alt="flickr icon" /></a></li>
+					<li><a href="http://twitter.com/#!/choclo" title="Pagina Twitter" class="tip"><img src="_layout/images/social-icons/twitter.png" alt="twitter icon" /></a></li>
+					<li><a href="http://www.facebook.com/tolivares" title="Pagina Facebook" class="tip"><img src="_layout/images/social-icons/facebook.png" alt="facebook icon" /></a></li>
+					<li><a href="http://www.linkedin.com/in/tomasolivares" title="Pagina LinkedIn" class="tip"><img src="_layout/images/social-icons/linkedin.png"  alt="linkedin icon"/></a></li>
+					<li><a href="#" title="Enviame un mensaje" class="tip"><img src="_layout/images/social-icons/yahoo.png"  alt="contact me"/></a></li>
+				</ul>
+				<ul>
+					<li>e: <a href="mailto:tolivares@gmail.com">tolivares@gmail.com</a></li>
+					<li>w: <a href="http://tomasolivares.com">tomasolivares.com</a></li>
+					<li>f: <strong>(56-98) 271-XXXX</strong></li>
+				</ul>
+			</div>
+	
+		</div><!-- end .cv-section -->
+		
+		<!-- // PROFESIONAL PROFILE //////////////////////////////////////////////////////// -->
+		
+		<div class="cv-section fixed">
+		
+			<h2 class="cv-section-name">Perfil Profesional</h2>
+			
+			<div class="cv-section-items">
+				
+				<div class="item last-item">
+					<p>Administrador de sistemas con fuerte conocimiento de Linux de distintas
+					 distribuciones tales como Red Hat, CentOS, Debian, Ubuntu, Solaris.
+					 Experiencia en servidores para aplicaciones web, bases de datos MySQL,
+					 asi como tambien virtualizacion y servidores de tipo cluster.
+					 <br />Excelentes habilidades interpersonales.
+					 <br />Idioma Ingles experto tanto conversacional como escrito.</p>
+					<p>Experiencia tanto en ambientes de Datacenter como empresariales cuyos
+					principales negocios son la venta de servicios de TI y Software asi como
+					tambien middleware.
+				</div><!-- end .item -->
+				
+			</div><!-- end .cv-section-items -->
+			
+		</div><!-- end .cv-section -->
+		
+		<!-- // WORK EXPERIENCE /////////////////////////////////////////////////////////// -->
+		
+		<div class="cv-section fixed">
+		
+			<h2 class="cv-section-name">Exp. Laboral</h2>
+			
+			<div class="cv-section-items">
+				
+				<div class="item">
+					<h4>Nov 2011 - Presente</h4>
+					<h2>RHEL Consultant</h2>
+					<h3>Red Hat, Full-Time</h3>
+					<br />
+					<ul>
+						<li>Encargado de proyectos para clientes desde planificacion, 
+						pasando a coordinacion y finalmente ejecucion de los mismos. </li>
+						<li>Lidero proyectos con equipos multidisciplinarios para clientes
+						tanto con proveedores externos como dentro de las organizaciones
+						con las cuales se trabaja en los mismos.</li>
+					</ul>
+				</div><!-- end .item -->
+				<div class="item">
+					<h4>Sep 2010 - Oct 2011</h4>
+					<h2>Unix Administrator Specialist</h2>
+					<h3>Global Crossing, Full-Time</h3>
+					<br />
+					<ul>
+						<li>A cargo de la administracion de variados sistemas
+						entre ellos CentOS, RHEL (3,4,5), Solaris (9,10),
+						monitoreo de servicios, optimizacion de OS para DBs,
+						clusters, sistemas de almacenamiento.</li>
+						<li>A cargo de la administracion de la plataforma virtual
+						(Cloud Computing) basada en VMware vSphere con HA (SaaS, IaaS)</li>
+					</ul>
+				</div><!-- end .item -->
+
+				<div class="item">
+					<h4>Mar 2007 - Ago 2010</h4>
+					<h2>Administrador de Sistemas</h2>
+					<h3>Site5 LLC, Full-Time</h3>
+					<br />
+					<ul>
+						<li>A cargo de soporte a clientes directos y administracion
+						de sistemas basados en CentOS.</li>
+						<li>Monitoreo de sistemas y troubleshooting (Nivel 2/3)</li>
+					</ul>
+				</div><!-- end .item -->
+
+				<div class="item">
+					<h4>Sep 2006 - Mar 2007</h4>
+					<h2>Administrador de Sistemas</h2>
+					<h3>Lunarpages, Full-Time</h3>
+					<br />
+					<ul>
+						<li>A cargo de monitoreo de servicios con Nagios asi como
+						tambien soporte Nivel 2/3.</li>	
+						<li>Provei de consultorias a clientes en temas de virtualizacion
+						y servidores dedicados para distintas aplicaciones.</li>
+						<li>A cargo de delivery de nuevos servidores y plataformas virtuales
+						para clientes basados en Linux y Windows</li>	
+					</ul>
+				</div><!-- end .item -->
+				
+				<div class="item last-item">
+					<h4>Apr 2005 - Aug 2006</h4>
+					<h2>Administrador de Sistemas</h2>
+					<h3>Defender Technologies, Full-Time</h3>
+					<br />
+					<ul>
+						<li>A cargo de soporte tecnico para clientes en plataformas virtuales basadas
+						en Virtuozzo (Virtualizacion basada en BSD Jail Shell).</li>
+						<li>Monitoreo de distintos servicios para clientes en Nagios y Cacti</li>
+					</ul>
+				</div><!-- end .item -->
+				
+			</div><!-- end .cv-section-items -->
+			
+		</div><!-- end .cv-section -->
+		
+		<!-- // TECHNICAL SKILLS /////////////////////////////////////////////////////////// -->
+		
+		<div class="cv-section fixed">
+		
+			<h2 class="cv-section-name">Habilidades Tecnicas</h2>
+			
+			<div class="cv-section-items">
+				
+				<div class="item">
+					<h4>Experto, 8 a&Ntilde;os</h4>
+					<h2><a href="#">RHEL &amp; CentOS</a></h2>
+					<br />
+					<p>Instalacion, configuracion, puesta a punto. Configuracion y creacion de
+					 filesystems, configuracion de storage local y remoto, manejo de seguridad,
+					 instalacion de diversos servicios.
+					Configuracion de ambientes de virtualizacion basados en XEN Hypervisor.</p>
+				</div><!-- end .item -->
+				
+				<div class="item">
+					<h4>Avanzado, 2 a&Ntilde;os</h4>
+					<h2><a href="#">Sun Solaris</a></h2>
+					<br />
+					<p>Instalacion, configuracion y puesta a punto. Configuracion y creacion de
+					 filesystems, configuracion de storage local y remoto, instalacion de servicios.
+					Manejo de zonas Solaris nativas y ZFS.</p>
+					<p>En proceso de certificacion Sun Certified System Administrator (SCSA) 
+					for Solaris OS 10.</p>
+				</div><!-- end .item -->
+				
+				<div class="item last-item">
+					<h4>Avanzado, 2 a&Ntilde;os</h4>
+					<h2><a href="#">VMware vSphere</a></h2>
+					<br />
+					<p>Instalacion y configuracion de la plataforma virtual vSphere. 
+					 Maecenas luctus interdum mauris, pellentesque semper quam sollicitudin eu.
+					 Class aptent taciti sociosqu ad litora torquent per conubia nostra.</p>
+					<p>Pellentesque elementum hendrerit pretium. Nam a lacus risus. Ut purus
+					leo, feugiat in volutpat non, ultricies vitae lectus.</p>	
+				</div><!-- end .item -->
+				
+			</div><!-- end .cv-section-items -->
+			
+		</div><!-- end .cv-section -->
+
+		<!-- // CERTIFICATION SKILLS /////////////////////////////////////////////////////////// -->
+		
+		<div class="cv-section fixed">
+		
+			<h2 class="cv-section-name">Certificaciones</h2>
+			
+			<div class="cv-section-items">
+				
+				<div class="item">
+					<h4>Red Hat</h4>
+					<h2><a href="#">Red Hat Certified Systems Administrator (RHCSA)</a></h2>
+					<br />
+					<p>Certification Number: <b>120-001-953</b>
+					<br />URL: <a href="https://www.redhat.com/wapps/training/certification/verify.html?certNumber=120-001-953&verify=Verify" target="blank_">https://www.redhat.com/wapps/training/certification/verify.html</a></p>
+				</div><!-- end .item -->
+				
+				<div class="item last-item">
+					<h4>Red Hat</h4>
+					<h2><a href="#">Red Hat Certified Engineer (RHCE)</a></h2>
+					<br />
+					<p>Certification Number: <b>120-001-953</b>
+					<br />URL: <a href="https://www.redhat.com/wapps/training/certification/verify.html?certNumber=120-001-953&verify=Verify" target="blank_">https://www.redhat.com/wapps/training/certification/verify.html</a></p>
+				</div><!-- end .item -->
+								
+			</div><!-- end .cv-section-items -->
+			
+		</div><!-- end .cv-section -->
+		
+		<!-- // EDUCATION ////////////////////////////////////////////////////////////////// -->
+		
+		<div class="cv-section last-cv-section fixed">
+		
+			<h2 class="cv-section-name">Educacion</h2>
+			
+			<div class="cv-section-items">
+				
+				<div class="item last-item">
+					<h4>Mar 2009 - Dic 2013</h4>
+					<h2>Universidad Diego Portales</h2>
+					<h3>Ingenieria en Informatica y Gestion — (En curso)</h3>
+					<br />
+					<p>Actualmente cursando 3er a&ntilde;o de la carrera de Ingenieria
+					 en Informatica y Gestion con minor en Marketing.</p>	
+				</div>
+				
+				<div class="item last-item">
+					<h2>Liceo Exp. Manuel de Salas</h2>
+					<h3>Ense&ntilde;anza Basica y Media</h3>
+					<br />	
+				</div><!-- end .item -->
+				
+			</div><!-- end .cv-section-items -->
+			
+		</div><!-- end .cv-section -->
+		
+		<!-- ////////////////////////////////////////////////////////////////////////////// -->
+	
+	</div><!-- end #cv -->
+	
+	<div class="panel">
+		
+		<p id="formstatus"></p>
+		<form id="contact-form" action="javascript:alert('success!');">
+			<fieldset>
+				<p>
+					<input class="textbox" type="text" name="name" value="Nombre*"
+					onfocus="if(this.value=='Name*')this.value='';" onblur="if(this.value=='')this.value='Name*';" />
+				</p>
+				<p>
+					<input class="textbox" type="text" name="email" value="Email*"
+					onfocus="if(this.value=='Email*')this.value='';" onblur="if(this.value=='')this.value='Email*';" />
+				</p>
+				<p>
+					<input class="textbox" type="text" name="subject" value="Asunto*"  
+					onfocus="if(this.value=='Subject*')this.value='';" onblur="if(this.value=='')this.value='Subject*';"/>
+				</p>
+				<p>
+					<textarea class="textbox" name="message" rows="3" cols="25"></textarea>
+				</p>
+				<p>
+					<input class="btn" type="submit" name="submit" value="Enviar!" />
+					<input class="btn" type="reset" name="submit" value="Limpiar" />
+				</p>
+			</fieldset>
+		</form><!-- end #contact-form -->
+
+	</div><!-- end .panel -->
+	
+	<br />
+	<br />
+	
+	<a class="emailme" href="#">Contactame</a>
+
+	<script type="text/javascript"> Cufon.now(); </script>
+	<!-- analytics here -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-161932-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+        <!-- analytics here -->
+
+</body>
+</html>

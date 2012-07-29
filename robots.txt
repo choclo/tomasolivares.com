@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /_layout/
+Disallow: /deliciouslibrary/
+Disallow: /fotos/
+Disallow: /PHP/
+Allow: /
