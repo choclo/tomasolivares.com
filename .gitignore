@@ -1,6 +1,5 @@
 error_log
 wiki/*
-.htaccess
 php.ini
 *.log
 .DS_Store
